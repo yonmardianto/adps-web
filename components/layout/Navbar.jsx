@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { FaBars, FaTimes } from 'react-icons/fa';
+import Image from 'next/image';
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -20,19 +21,24 @@ export default function Navbar() {
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b border-blue-sky/15 backdrop-blur-xl
       ${scrolled ? 'bg-blue-deep/98 shadow-[0_4px_24px_rgba(0,0,0,0.3)]' : 'bg-blue-deep/95'}`}>
-      <div className="max-w-6xl mx-auto px-6 h-[70px] flex items-center justify-between">
+      <div className="max-w-6xl mx-auto px-6 h-[70px] flex items-center justify-between h-24">
 
-        {/* Logo */}
-        <a href="#home" className="flex items-center gap-3 no-underline">
-          <div className="relative w-11 h-11 rounded-xl bg-gradient-to-br from-blue-bright to-blue-sky flex items-center justify-center overflow-hidden">
-            <span className="font-sora font-extrabold text-[13px] text-white tracking-wide z-10">ADPS</span>
-            <div className="absolute bottom-0 right-0 w-4 h-4 bg-adps-yellow clip-triangle" />
+           {/* Logo + Text */}
+          <div className="flex items-center">
+            <Image
+              src="/assets/img/logo.png"
+              alt="ADPS Logo"
+              width={130}
+              height={130}
+              className="object-contain"
+            />
+            <div className="leading-tight">
+              <p className="text-[#C9A227] font-bold text-sm tracking-widest">ADPS</p>
+              <p className={`${scrolled ? 'text-black font-bold' :'text-white'} text-[13px] tracking-wide uppercase hidden sm:block`}>
+                PT Alih Daya Pamungkas Sejahtera
+              </p>
+            </div>
           </div>
-          <div className="flex flex-col">
-            <span className={`font-sora font-bold text-base ${scrolled ? 'text-black' : 'text-white'}`}>PT ALIH DAYA</span>
-            <span className="text-[10px] font-semibold text-adps-yellow uppercase tracking-widest">Pamungkas Sejahtera</span>
-          </div>
-        </a>
 
         {/* Desktop links */}
         <ul className="hidden md:flex items-center gap-1 list-none">

@@ -2,21 +2,21 @@ import { FaComments, FaUserPlus, FaBuilding, FaGraduationCap, FaArrowRight, FaCo
 
 const services = [
   {
-    img: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&h=300&fit=crop&crop=top',
+    img: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&h=500&fit=crop&crop=top',
     icon: FaComments,
     iconClass: 'bg-blue-bright/10 text-blue-bright',
     title: 'Konsultasi HR',
     desc: 'Solusi strategis pengelolaan SDM mencakup audit organisasi, penyusunan SOP, evaluasi jabatan, dan pengembangan budaya perusahaan yang sesuai kebutuhan bisnis Anda.',
   },
   {
-    img: 'https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=600&h=300&fit=crop&crop=top',
+    img: 'https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=600&h=500&fit=crop&crop=top',
     icon: FaUserPlus,
     iconClass: 'bg-adps-yellow/10 text-yellow-600',
     title: 'Rekrutmen Profesional',
     desc: 'Proses seleksi berbasis kompetensi untuk menemukan kandidat yang paling sesuai dengan profil dan kebutuhan perusahaan Anda. Cepat, terukur, dan efisien.',
   },
   {
-    img: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&h=300&fit=crop&crop=center',
+    img: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&h=500&fit=crop&crop=center',
     icon: FaBuilding,
     iconClass: 'bg-blue-bright/10 text-blue-bright',
     title: 'Outsourcing Tenaga Kerja',

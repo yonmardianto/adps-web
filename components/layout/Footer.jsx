@@ -12,7 +12,6 @@ export default function Footer() {
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4 flex-wrap">
 
         <div className="flex items-center gap-3">
-          <span className="text-xs font-medium text-white/50">Ikuti Kami:</span>
           {socials.map(({ icon: Icon, href, label, color }) => (
             <a key={label} href={href} target="_blank" rel="noopener noreferrer" title={label}
               className={`w-10 h-10 rounded-xl bg-white/7 border border-white/8 flex items-center justify-center text-white/60 hover:text-white ${color} transition-all duration-200 hover:-translate-y-0.5`}>
