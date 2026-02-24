@@ -7,6 +7,7 @@ import ServicesSection from '../components/sections/ServicesSection';
 import JobsSection from '../components/sections/JobsSection';
 import ContactSection from '../components/sections/ContactSection';
 
+const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || 'https://adps-web.vercel.app';
 
 export default function Home() {
   return (
@@ -19,9 +20,10 @@ export default function Home() {
         <meta property="og:locale" content="id_ID" />
         <meta property="og:site_name" content="PT Alih Daya Pamungkas Sejahtera"/ >
         <meta property="og:title" content="Business Supply Services" />
+        <meta property="og:url" content={BASE_URL} />
         <meta property="og:description" content="HR, Outsourcing, Human Resources, Candidates , Job Vacancies" />
 
-        <meta property="og:image" content="/assets/img/og_image.png" />
+        <meta property="og:image" content={`${BASE_URL}/assets/img/og_image.png`} />
         <meta property="og:image:type" content="image/png" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
