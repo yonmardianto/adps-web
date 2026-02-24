@@ -21,15 +21,15 @@ export default function Navbar() {
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b border-blue-sky/15 backdrop-blur-xl
       ${scrolled ? 'bg-blue-deep/98 shadow-[0_4px_24px_rgba(0,0,0,0.3)]' : 'bg-blue-deep/95'}`}>
-      <div className="max-w-6xl mx-auto px-6 h-[70px] flex items-center justify-between h-24">
+      <div className="max-w-6xl mx-auto px-6 h-[70px] flex items-center justify-between h-20">
 
            {/* Logo + Text */}
           <div className="flex items-center">
             <Image
               src="/assets/img/logo.png"
               alt="ADPS Logo"
-              width={130}
-              height={130}
+              width={100}
+              height={100}
               className="object-contain"
             />
             <div className="leading-tight">
