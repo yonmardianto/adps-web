@@ -21,8 +21,23 @@ export default function Home() {
           name="description"
           content="PT Alih Daya Pamungkas Sejahtera – Solusi HR dan outsourcing tenaga kerja profesional terpercaya di Indonesia."
         />
+
+        <link
+          rel="icon"
+          type="image/png"
+          href="/favicon-96x96.png"
+          sizes="96x96"
+        />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <link rel="shortcut icon" href="/favicon.ico" />
+        <link
+          rel="apple-touch-icon"
+          sizes="180x180"
+          href="/apple-touch-icon.png"
+        />
+        <link rel="manifest" href="/site.webmanifest" />
+
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/assets/img/favicon/favicon.ico" />
         <meta property="og:locale" content="id_ID" />
         <meta
           property="og:site_name"
