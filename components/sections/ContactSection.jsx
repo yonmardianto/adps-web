@@ -22,7 +22,7 @@ export default function ContactSection() {
 
     try {
       // Get reCAPTCHA v2 token
-      const token = window.grecaptcha.getResponse();
+      const token = grecaptcha.getResponse();
 
       if (!token) {
         showToast("⚠️ Harap selesaikan verifikasi reCAPTCHA terlebih dahulu");
@@ -41,7 +41,7 @@ export default function ContactSection() {
 
       if (!verifyData.success) {
         showToast("⚠️ Verifikasi reCAPTCHA gagal. Silakan coba lagi.");
-        window.grecaptcha.reset();
+        grecaptcha.reset();
         setIsLoading(false);
         return;
       }
