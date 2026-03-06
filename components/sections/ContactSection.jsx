@@ -22,13 +22,15 @@ export default function ContactSection() {
 
     try {
       // Get reCAPTCHA v2 token
-      const token = grecaptcha.getResponse();
+      const token = window.grecaptcha.getResponse();
 
       if (!token) {
         showToast("⚠️ Harap selesaikan verifikasi reCAPTCHA terlebih dahulu");
         setIsLoading(false);
         return;
       }
+
+      window.grecaptcha.reset();
 
       // Verify token on the backend
       const verifyResponse = await fetch("/api/verify-captcha", {
