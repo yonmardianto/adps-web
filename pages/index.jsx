@@ -12,7 +12,7 @@ const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || 'https://adps-web.vercel.ap
 export default function Home() {
   return (
     <>
-      <Head>
+      <Head>  
         <title>PT Alih Daya Pamungkas Sejahtera | HR & Outsourcing Solutions</title>
         <meta name="description" content="PT Alih Daya Pamungkas Sejahtera – Solusi HR dan outsourcing tenaga kerja profesional terpercaya di Indonesia." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
