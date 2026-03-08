@@ -1,3 +1,5 @@
+"use client";
+
 import { useState } from "react";
 import { FaEnvelope, FaPaperPlane, FaSpinner } from "react-icons/fa";
 
@@ -22,15 +24,13 @@ export default function ContactSection() {
 
     try {
       // Get reCAPTCHA v2 token
-      const token = window.grecaptcha.getResponse();
+      const token = grecaptcha.getResponse();
 
       if (!token) {
         showToast("⚠️ Harap selesaikan verifikasi reCAPTCHA terlebih dahulu");
         setIsLoading(false);
         return;
       }
-
-      window.grecaptcha.reset();
 
       // Verify token on the backend
       const verifyResponse = await fetch("/api/verify-captcha", {
@@ -40,6 +40,8 @@ export default function ContactSection() {
       });
 
       const verifyData = await verifyResponse.json();
+
+      // const verifyData = await verifyCaptcha(token);
 
       if (!verifyData.success) {
         showToast("⚠️ Verifikasi reCAPTCHA gagal. Silakan coba lagi.");
@@ -71,13 +73,13 @@ export default function ContactSection() {
 
       if (!emailResponse.ok) {
         showToast("⚠️ Gagal mengirim email. Silakan coba lagi.");
-        window.grecaptcha.reset();
+        grecaptcha.reset();
         setIsLoading(false);
         return;
       } else {
         showToast(`✅ Terima kasih, ${form.name}! Pesan Anda telah terkirim.`);
         setForm({ name: "", email: "", type: "", message: "" });
-        window.grecaptcha.reset();
+        grecaptcha.reset();
       }
     } catch (error) {
       console.error("Captcha error:", error);
